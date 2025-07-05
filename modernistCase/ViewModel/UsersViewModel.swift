@@ -10,8 +10,8 @@ import Foundation
 class UsersViewModel: ObservableObject {
     @Published var users: [User] = []
     @Published var searchText: String = ""
-    @Published var favoritesSearchText: String = ""
     @Published var favorites: [User] = []
+    @Published var favoritesSearchText: String = ""
 
     init() {
         loadUsers()

@@ -12,9 +12,28 @@ struct UsersListView: View {
 
     var body: some View {
         NavigationView {
-            List(viewModel.filteredUsers) { user in
-                NavigationLink(destination: UserDetailView(user: user, viewModel: viewModel)) {
-                    UserRowView(user: user, isFavorite: viewModel.isFavorite(user))
+            List {
+                ForEach(viewModel.filteredUsers) { user in
+                    NavigationLink(destination: UserDetailView(user: user, viewModel: viewModel)) {
+                        UserRowView(user: user, isFavorite: viewModel.isFavorite(user))
+                    }
+                    .swipeActions(edge: .leading) {
+                        if viewModel.isFavorite(user) {
+                            Button {
+                                viewModel.toggleFavorite(user)
+                            } label: {
+                                Label("Favoriden Çıkar", systemImage: "star.slash")
+                            }
+                            .tint(.red)
+                        } else {
+                            Button {
+                                viewModel.toggleFavorite(user)
+                            } label: {
+                                Label("Favorilere Ekle", systemImage: "star")
+                            }
+                            .tint(.yellow)
+                        }
+                    }
                 }
             }
             .searchable(text: $viewModel.searchText)

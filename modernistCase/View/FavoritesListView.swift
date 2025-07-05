@@ -13,9 +13,19 @@ struct FavoritesListView: View {
 
     var body: some View {
         NavigationView {
-            List(viewModel.filteredFavorites) { user in
-                NavigationLink(destination: UserDetailView(user: user, viewModel: viewModel)) {
-                    UserRowView(user: user, isFavorite: true)
+            List {
+                ForEach(viewModel.filteredFavorites) { user in
+                    NavigationLink(destination: UserDetailView(user: user, viewModel: viewModel)) {
+                        UserRowView(user: user, isFavorite: true)
+                    }
+                    .swipeActions(edge: .trailing) {
+                        Button {
+                            viewModel.toggleFavorite(user)
+                        } label: {
+                            Label("Favoriden Çıkar", systemImage: "star.slash")
+                        }
+                        .tint(.red)
+                    }
                 }
             }
             .searchable(text: $viewModel.favoritesSearchText)

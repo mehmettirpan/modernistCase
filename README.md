@@ -34,3 +34,5 @@ Uygulamada modern bir MVVM (Model - View - ViewModel) mimarisi tercih edilmişti
 | `Model`     | `User` ve `Address` gibi veri yapıları burada tanımlanır. Codable desteği ile JSON'dan kolayca parse edilir. |
 | `ViewModel` | `UsersViewModel` tüm veri işleme, filtreleme ve favori yönetimi gibi iş mantığını barındırır. |
 | `View`      | SwiftUI arayüzleri burada yer alır. Her ekran ayrı dosyadadır ve MVVM prensiplerine uygun şekilde `ViewModel` ile haberleşir. |
+
+---

@@ -12,10 +12,11 @@ SwiftUI ile geliştirilen, kullanıcı listeleme ve favori yönetimi özellikler
 - Local JSON ile mock veri kullanımı
 - Resim desteği (URL üzerinden `AsyncImage` ile)
 - Kaydırma özelliği ile birlikte;
-    - Favoriler ekranında kullanıcıyı sağdan sola kaydırarak favorilerden çıkarılabilir
+    - Favoriler ekranında kullanıcıyı sağdan sola kaydırarak favorilerden çıkarılabilme
     - Kullanıcıların olduğu ekranda soldan sağa kaydırılarak;
-        - eğer ki kullanıcı favorilerde ekli ise favorilerden çıkarma ikonu ile birlikte favorilerden çıkarılabilir
-        - favorilerde ekli değilse favorilere ekleme ikonu ile birlikte kullanıyı burada hızlı şekilde favorilere eklenebilir
+        - Eğer ki kullanıcı favorilerde ekli ise favorilerden çıkarma ikonu ile birlikte favorilerden çıkarılabilme
+        - Favorilerde ekli değilse favorilere ekleme ikonu ile birlikte kullanıcıyı burada hızlı şekilde favorilere eklenilebilme
+- iPhone'da yalnızca dikey kullanım
 
 ---
 

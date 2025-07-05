@@ -11,6 +11,11 @@ SwiftUI ile geliştirilen, kullanıcı listeleme ve favori yönetimi özellikler
 - Yerel veri saklama (UserDefaults) (Not: Proje küçük olduğu için UserDefaults seçildi çünkü küçük işler için daha kullanışlı ve hızlı ama json dosyası ya da kullanıcı ekleme gibi başka bir özellik de kullanılacak olsaydı burada tercihimiz coreData olacaktı.)
 - Local JSON ile mock veri kullanımı
 - Resim desteği (URL üzerinden `AsyncImage` ile)
+- Kaydırma özelliği ile birlikte;
+    - Favoriler ekranında kullanıcıyı sağdan sola kaydırarak favorilerden çıkarılabilir
+    - Kullanıcıların olduğu ekranda soldan sağa kaydırılarak;
+        - eğer ki kullanıcı favorilerde ekli ise favorilerden çıkarma ikonu ile birlikte favorilerden çıkarılabilir
+        - favorilerde ekli değilse favorilere ekleme ikonu ile birlikte kullanıyı burada hızlı şekilde favorilere eklenebilir
 
 ---
 
